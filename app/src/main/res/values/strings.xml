@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">AnAmp</string>
+
+    <!--Songs-->
+    <integer name="number_of_songs">6</integer>
+
+    <string name="song_1_name">#41</string>
+    <string name="song_1_artist">Dave Matthews Band</string>
+    <string name="song_1_album_name">Crash</string>
+    <string name="song_1_release_year">1996</string>
+    <string name="song_1_genre">jazz fusion</string>
+    <string name="song_1_length">6:39</string>
+
+    <string name="song_2_name">Two Step</string>
+    <string name="song_2_artist">Dave Matthews Band</string>
+    <string name="song_2_album_name">Crash</string>
+    <string name="song_2_release_year">1996</string>
+    <string name="song_2_genre">rock, folk rock, bluegrass</string>
+    <string name="song_2_length">6:26</string>
+
+    <string name="song_3_name">So Much to Say</string>
+    <string name="song_3_artist">Dave Matthews Band</string>
+    <string name="song_3_album_name">Crash</string>
+    <string name="song_3_release_year">1996</string>
+    <string name="song_3_genre">folk rock, jazz fusion</string>
+    <string name="song_3_length">4:07</string>
+
+    <string name="song_4_name">Too Much</string>
+    <string name="song_4_artist">Dave Matthews Band</string>
+    <string name="song_4_album_name">Crash</string>
+    <string name="song_4_release_year">1996</string>
+    <string name="song_4_genre">rock, funk rock</string>
+    <string name="song_4_length">4:21</string>
+
+    <string name="song_5_name">Tripping Billies</string>
+    <string name="song_5_artist">Dave Matthews Band</string>
+    <string name="song_5_album_name">Crash</string>
+    <string name="song_5_release_year">1996</string>
+    <string name="song_5_genre">rock</string>
+    <string name="song_5_length">5:00</string>
+
+    <string name="song_6_name">Say Goodbye</string>
+    <string name="song_6_artist">Dave Matthews Band</string>
+    <string name="song_6_album_name">Crash</string>
+    <string name="song_6_release_year">1996</string>
+    <string name="song_6_genre">rock</string>
+    <string name="song_6_length">6:10</string>
+
+
+    <!--list item-->
+    <string name="song_name">song_name</string>
+    <string name="song_length">song_length</string>
+    <string name="song_genre">song_genre</string>
+    <string name="song_album">song_album</string>
+
+    <!--Main Activity Strings-->
+    <string name="app_title">AnAmp - The Music Player</string>
+    <string name="song_details">Details</string>
+    <string name="song_library">Song Library</string>
+
+    <!--Details Page Specific Strings-->
+    <string name="app_details_title">AnAmp - Details</string>
+    <string name="song_details_lyrics">Lyrics...</string>
+</resources>

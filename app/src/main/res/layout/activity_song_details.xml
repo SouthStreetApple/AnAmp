@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+            <!--Album Art-->
+            <ImageView
+                android:id="@+id/album_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="18dp"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--This where the details of the song will show!-->
+                <TextView
+                    android:id="@+id/song_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/song_name"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="16dp"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/song_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/song_length"
+                    android:paddingLeft="16dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/song_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/song_album"
+                    android:paddingLeft="16dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/song_genre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/song_genre"
+                    android:paddingLeft="16dp"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/song_position"
+            android:paddingTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/song_btn_backward"
+                android:layout_width="@dimen/control_width"
+                android:layout_height="@dimen/control_height"
+                android:background="@drawable/ic_fast_rewind_black_24dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/song_btn_stop"
+                android:layout_width="@dimen/control_width"
+                android:layout_height="@dimen/control_height"
+                android:background="@drawable/ic_stop_black_24dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/song_btn_pause"
+                android:layout_width="@dimen/control_width"
+                android:layout_height="@dimen/control_height"
+                android:background="@drawable/ic_pause_black_24dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/song_btn_play"
+                android:layout_width="@dimen/control_width"
+                android:layout_height="@dimen/control_height"
+                android:background="@drawable/ic_play_arrow_black_24dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/song_btn_forward"
+                android:layout_width="@dimen/control_width"
+                android:layout_height="@dimen/control_height"
+                android:background="@drawable/ic_fast_forward_black_24dp"
+                android:text="" />
+        </LinearLayout>
+        <TextView
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_ui"
+            android:hint="@string/song_details_lyrics"
+            />
+    </LinearLayout>
+</ScrollView>

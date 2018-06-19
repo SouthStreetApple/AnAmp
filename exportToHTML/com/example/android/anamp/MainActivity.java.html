@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">private void </span><span class="s1">loadSongs() { 
+        </span><span class="s2">/** 
+         * Special Thanks to @Neural &amp; @BigMikeDog from the Grow with Google Scholarship Slack. 
+         * They were instrumental in helping me debug my array usage and getIdentifier issues. 
+         * 
+         * This loads the songs into an array 
+         */</span><span class="s1"> 
+        </span><span class="s0">int </span><span class="s1">x; 
+        String songID; 
+ 
+        </span><span class="s0">int </span><span class="s1">songNameID; 
+        </span><span class="s0">int </span><span class="s1">albumNameID; 
+        </span><span class="s0">int </span><span class="s1">releaseYearID; 
+        </span><span class="s0">int </span><span class="s1">songGenreID; 
+        </span><span class="s0">int </span><span class="s1">songArtistID; 
+        </span><span class="s0">int </span><span class="s1">songLengthID; 
+ 
+ 
+        </span><span class="s0">for </span><span class="s1">(x = </span><span class="s3">0</span><span class="s1">; x &lt; numberOfSongs; x++) { 
+            songs[x] = </span><span class="s0">new </span><span class="s1">song(); 
+            </span><span class="s2">/*Grab resource IDs for the x song*/</span><span class="s1"> 
+            songNameID = getResources().getIdentifier(</span><span class="s4">&quot;song_&quot; </span><span class="s1">+ (x + </span><span class="s3">1</span><span class="s1">) + </span><span class="s4">&quot;_name&quot;</span><span class="s1">, </span><span class="s4">&quot;string&quot;</span><span class="s1">, getPackageName()); 
+            albumNameID = getResources().getIdentifier(</span><span class="s4">&quot;song_&quot; </span><span class="s1">+ (x + </span><span class="s3">1</span><span class="s1">) + </span><span class="s4">&quot;_album_name&quot;</span><span class="s1">, </span><span class="s4">&quot;string&quot;</span><span class="s1">, getPackageName()); 
+            releaseYearID = getResources().getIdentifier(</span><span class="s4">&quot;song_&quot; </span><span class="s1">+ (x + </span><span class="s3">1</span><span class="s1">) + </span><span class="s4">&quot;_release_year&quot;</span><span class="s1">, </span><span class="s4">&quot;string&quot;</span><span class="s1">, getPackageName()); 
+            songGenreID = getResources().getIdentifier(</span><span class="s4">&quot;song_&quot; </span><span class="s1">+ (x + </span><span class="s3">1</span><span class="s1">) + </span><span class="s4">&quot;_genre&quot;</span><span class="s1">, </span><span class="s4">&quot;string&quot;</span><span class="s1">, getPackageName()); 
+            songArtistID = getResources().getIdentifier(</span><span class="s4">&quot;song_&quot; </span><span class="s1">+ (x + </span><span class="s3">1</span><span class="s1">) + </span><span class="s4">&quot;_artist&quot;</span><span class="s1">, </span><span class="s4">&quot;string&quot;</span><span class="s1">, getPackageName()); 
+            songLengthID = getResources().getIdentifier(</span><span class="s4">&quot;song_&quot; </span><span class="s1">+ (x + </span><span class="s3">1</span><span class="s1">) + </span><span class="s4">&quot;_length&quot;</span><span class="s1">, </span><span class="s4">&quot;string&quot;</span><span class="s1">, getPackageName()); 
+            </span><span class="s2">/*Sets song information*/</span><span class="s1"> 
+            songs[x].setSong(getString(songNameID),getString(albumNameID),getString(releaseYearID),getString(songGenreID),getString(songArtistID),getString(songLengthID)); 
+            </span><span class="s2">/*Load songs into list on the apps first screen?*/</span><span class="s1"> 
+ 
+ 
+            Log.e(</span><span class="s4">&quot;LOADING ARRAY&quot;</span><span class="s1">, songs[x].songName); 
+        } 
+        Log.e(</span><span class="s4">&quot;TOTAL&quot;</span><span class="s1">, String.valueOf(songs.length)); 
+    }</span></pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Needed code to show item was highlighted -->
+<!-- URL: https://stackoverflow.com/a/17199381/9849310 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator">
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:hint="@string/song_name"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        />
+    <TextView
+        android:id="@+id/song_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="@string/song_length"
+        android:paddingLeft="16dp"
+        />
+    <TextView
+        android:id="@+id/song_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="@string/song_album"
+        android:paddingLeft="16dp"
+        />
+    <TextView
+        android:id="@+id/song_genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="@string/song_genre"
+        android:paddingLeft="16dp"
+        />
+</LinearLayout>
