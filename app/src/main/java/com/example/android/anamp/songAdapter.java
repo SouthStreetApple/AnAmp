@@ -15,10 +15,8 @@ import java.util.ArrayList;
 
 public class songAdapter extends ArrayAdapter<song> {
 
-
-
     public songAdapter(Activity context, ArrayList<song> objects) {
-        super(context,0, objects);
+        super(context, 0, objects);
 
     }
 
@@ -30,13 +28,13 @@ public class songAdapter extends ArrayAdapter<song> {
 
         //Check to see if the current song view is null, if it is create it
         View listItemView = convertView;
-        if (listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
+        if (listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
         //Update the listItemView with data from the song.
         //Song Name
-        TextView songName  = (TextView) listItemView.findViewById(R.id.song_name);
+        TextView songName = (TextView) listItemView.findViewById(R.id.song_name);
         songName.setText(currentSong.songName);
         //Length of song
         TextView songLength = (TextView) listItemView.findViewById(R.id.song_length);
@@ -48,11 +46,8 @@ public class songAdapter extends ArrayAdapter<song> {
         TextView songGenre = (TextView) listItemView.findViewById(R.id.song_genre);
         songGenre.setText(currentSong.songGenre);
 
-
         //Return the listViewItem!
         return listItemView;
     }
-
-
 }
 

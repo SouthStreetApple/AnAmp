@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         int songArtistID;
         int songLengthID;
 
-
         for (x = 1; x < (numberOfSongs + 1); x++) {
             song s = new song();
             /*Grab resource IDs for the x song*/
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e("TOTAL", String.valueOf(songs.size()));
 
         /**
-         * This uses a custom adaptor songAdaptor to link the ListView tot he adaptor to display the songs in the ArrayList
+         * This uses a custom adaptor songAdaptor to link the ListView to the adaptor to display the songs in the ArrayList
          */
         songAdapter sa = new songAdapter(this, songs);
         songList.setAdapter(sa);
@@ -128,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
      * Button onClick handlers, many thanks to Cubeactive Blog for the idea of using a case witch to handle all the button code in one place.
      * URL: http://blog.cubeactive.com/onclicklistener-android-tutorial/
      */
-    //Global On click listener for all views
+    //Global On click listener so we can handle our button clicks
     View.OnClickListener appClickListener = new View.OnClickListener() {
         @Override
         public void onClick(final View view) {
@@ -154,9 +153,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
                     //Send data that we will need later...
                     i.putExtra("songs", songs);
-                    i.putExtra("selectSong",selectedSong);
-                    SeekBar sb = (SeekBar) findViewById(R.id.song_position);
-                    i.putExtra("songPosition",sb.getProgress());
+                    i.putExtra("selectSong", selectedSong);
+                    SeekBar seekBar = (SeekBar) findViewById(R.id.song_position);
+                    i.putExtra("songPosition", seekBar.getProgress());
                     startActivity(i);
                     break;
             }

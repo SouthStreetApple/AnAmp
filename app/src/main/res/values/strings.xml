@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AnAmp</string>
 
-    <!--Songs-->
+    <!--Song Information-->
     <integer name="number_of_songs">6</integer>
 
     <string name="song_1_name">#41</string>
@@ -45,7 +45,6 @@
     <string name="song_6_release_year">1996</string>
     <string name="song_6_genre">rock</string>
     <string name="song_6_length">6:10</string>
-
 
     <!--list item-->
     <string name="song_name">song_name</string>

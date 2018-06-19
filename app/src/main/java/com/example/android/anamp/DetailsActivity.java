@@ -35,8 +35,8 @@ public class DetailsActivity extends AppCompatActivity {
             //Gets which song we are working with
             selectedSong = extras.getInt("selectSong");
             //Sets the SeekBar Position
-            SeekBar sb = findViewById(R.id.song_position);
-            sb.setProgress(extras.getInt("songPosition"));
+            SeekBar seekBar = findViewById(R.id.song_position);
+            seekBar.setProgress(extras.getInt("songPosition"));
         }
         /**
          * Load song information into the various views.
@@ -72,7 +72,7 @@ public class DetailsActivity extends AppCompatActivity {
      * Button onClick handlers, many thanks to Cubeactive Blog for the idea of using a case witch to handle all the button code in one place.
      * URL: http://blog.cubeactive.com/onclicklistener-android-tutorial/
      */
-    //Global On click listener for all views
+    //Global On click listener so we can handle button clicks
     View.OnClickListener appClickListener = new View.OnClickListener() {
         @Override
         public void onClick(final View view) {

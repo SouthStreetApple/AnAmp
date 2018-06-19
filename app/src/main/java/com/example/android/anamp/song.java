@@ -1,6 +1,5 @@
 package com.example.android.anamp;
 
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -8,6 +7,13 @@ import android.os.Parcelable;
  * Simple little class that will allow me to create an array of songs that hols all the relevant data.
  * Utilized a plugin to make this Parceable
  * URL: http://corochann.com/fast-easy-parcelable-implementation-with-android-studio-parcelable-plugin-641.html
+ */
+
+/**
+ * Lyrics is NOT part of this class, as song lyrics are not typically found in the meta data
+ * of encoded songs or videos, it is assumed that a later version of this app would
+ * dynamically grab lyrics when the 'DETAILS' activity loads based on the song information passed
+ * by the intent.
  */
 
 public class song implements Parcelable {
@@ -19,11 +25,10 @@ public class song implements Parcelable {
     String songLength;
     int albumCover;
 
-
     /**
      * This function allows us to set all the values in one go.
      */
-    public void setSong(String song_name,String album_name,String release_year,String song_genre,String song_Artist, String song_length,int album_cover) {
+    public void setSong(String song_name, String album_name, String release_year, String song_genre, String song_Artist, String song_length, int album_cover) {
         songName = song_name;
         albumName = album_name;
         releaseYear = release_year;
