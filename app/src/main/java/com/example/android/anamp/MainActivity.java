@@ -85,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadSongs() {
         /**
-         * Special Thanks to @Neural & @BigMikeDog from the Grow with Google Scholarship Slack.
+         * Special Thanks to Neural & BigMikeDog from the Grow with Google Scholarship Slack.
          * They were instrumental in helping me debug my array usage and getIdentifier issues.
-         *
-         * This loads the songs into an array
+         * This loads the songs into an ArrayList which is then passed to Adaptor and then utilized
+         * by a ListView to show the contents.
          */
         int x;
         String songID;
@@ -101,23 +101,29 @@ public class MainActivity extends AppCompatActivity {
         int songLengthID;
 
         for (x = 1; x < (numberOfSongs + 1); x++) {
+            /*Create new instance of the custom class song*/
             song s = new song();
-            /*Grab resource IDs for the x song*/
+            /*Grab resource IDs for each (x) song from the strings resource file*/
             songNameID = getResources().getIdentifier("song_" + (x) + "_name", "string", getPackageName());
             albumNameID = getResources().getIdentifier("song_" + (x) + "_album_name", "string", getPackageName());
             releaseYearID = getResources().getIdentifier("song_" + (x) + "_release_year", "string", getPackageName());
             songGenreID = getResources().getIdentifier("song_" + (x) + "_genre", "string", getPackageName());
             songArtistID = getResources().getIdentifier("song_" + (x) + "_artist", "string", getPackageName());
             songLengthID = getResources().getIdentifier("song_" + (x) + "_length", "string", getPackageName());
-            /*Sets song information*/
+            /**
+             * Grabs the song data information from the strings resource file using the above
+             * resource IDs and ads them to the custom class s, song.
+             */
             s.setSong(getString(songNameID), getString(albumNameID), getString(releaseYearID), getString(songGenreID), getString(songArtistID), getString(songLengthID), R.drawable.dmb_album);
+            /*Add the custom class s to the ArrayList songs*/
             songs.add(s);
             Log.e("LOADING ARRAY", s.songName);
         }
         Log.e("TOTAL", String.valueOf(songs.size()));
 
         /**
-         * This uses a custom adaptor songAdaptor to link the ListView to the adaptor to display the songs in the ArrayList
+         * This creates a new custom adaptor sa, songAdaptor, using this context
+         * and the ArrayList songs, then sets the adaptor to the ListView songList
          */
         songAdapter sa = new songAdapter(this, songs);
         songList.setAdapter(sa);
