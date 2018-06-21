@@ -53,35 +53,35 @@
                     android:id="@+id/song_btn_backward"
                     android:layout_width="@dimen/control_width"
                     android:layout_height="@dimen/control_height"
-                    android:background="@drawable/ic_fast_rewind_black_24dp"
+                    android:background="@drawable/ic_fast_rewind"
                     android:text="" />
 
                 <Button
                     android:id="@+id/song_btn_stop"
                     android:layout_width="@dimen/control_width"
                     android:layout_height="@dimen/control_height"
-                    android:background="@drawable/ic_stop_black_24dp"
+                    android:background="@drawable/ic_stop"
                     android:text="" />
 
                 <Button
                     android:id="@+id/song_btn_pause"
                     android:layout_width="@dimen/control_width"
                     android:layout_height="@dimen/control_height"
-                    android:background="@drawable/ic_pause_black_24dp"
+                    android:background="@drawable/ic_pause"
                     android:text="" />
 
                 <Button
                     android:id="@+id/song_btn_play"
                     android:layout_width="@dimen/control_width"
                     android:layout_height="@dimen/control_height"
-                    android:background="@drawable/ic_play_arrow_black_24dp"
+                    android:background="@drawable/ic_play_arrow"
                     android:text="" />
 
                 <Button
                     android:id="@+id/song_btn_forward"
                     android:layout_width="@dimen/control_width"
                     android:layout_height="@dimen/control_height"
-                    android:background="@drawable/ic_fast_forward_black_24dp"
+                    android:background="@drawable/ic_fast_forward"
                     android:text="" />
 
                 <Button
